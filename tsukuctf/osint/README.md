@@ -17,7 +17,7 @@ Yandexにて似たようなラーメン屋を発見
 全国展開してるから，何店舗かアカウントが存在する
 - https://www.instagram.com/p/B0vbvOXgZhd/?igshid=tt1vi6kroc9l
 
-こういう時は，本店アカウントが狙い目だと思い，入力
+ ~~こういう時は，本店アカウントが狙い目だと思い，入力 ~~　問題文の指示通り本店アカウントを入力．
 - https://www.instagram.com/kagari_honten/?hl=ja
 
 ```txt
@@ -63,7 +63,7 @@ TsukuCTF{河内貯水池}
 画像を突っ込む
 https://www.reverseimagesearch.com/
 
-以下のサイトのマップがそれっぽいのストリートビューで探索
+以下のサイトのマップがそれっぽいのでストリートビューで探索
 - Koto Ward Wakasu Public Park - 東京港埠頭株式会社
   - https://www.tptc.co.jp/en/c_park/03_09
 
