@@ -17,7 +17,8 @@ Yandexにて似たようなラーメン屋を発見
 全国展開してるから，何店舗かアカウントが存在する
 - https://www.instagram.com/p/B0vbvOXgZhd/?igshid=tt1vi6kroc9l
 
- ~~こういう時は，本店アカウントが狙い目だと思い，入力 ~~　問題文の指示通り本店アカウントを入力．
+~~こういう時は，本店アカウントが狙い目だと思い，入力~~　
+問題文の指示通り本店アカウントを入力．
 - https://www.instagram.com/kagari_honten/?hl=ja
 
 ```txt
