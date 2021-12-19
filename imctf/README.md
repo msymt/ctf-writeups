@@ -1,7 +1,5 @@
 # imctf 2021 osint 作問者 writeup
 
-各mdを確認して下さい．
-
 ## 初めに
 
 IMCTF 2021の作問者の一人のMsYです．
