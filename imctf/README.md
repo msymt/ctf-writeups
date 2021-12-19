@@ -1,4 +1,4 @@
-# imctf osint 作問者 writeup
+# imctf 2021 osint 作問者 writeup
 
 各mdを確認して下さい．
 
