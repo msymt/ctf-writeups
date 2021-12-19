@@ -2,6 +2,18 @@
 
 各mdを確認して下さい．
 
+## 初めに
+
+IMCTF 2021の作問者の一人のMsYです．
+今回はOSINT問を4つ作りました．
+
+- [spaspaspaspaspa🍝](./spaspaspaspaspa.md) [34 Solves]
+- [go home🏡](./go_home.md) [23 Solves]
+- [birthday of my favorite🎂](./birthday_of_my_favorite.md) [18 Solves]
+- [P0keM0n G0🥎](./P0keM0n_G0.md) [11 Solves]
+
+初心者向けということで，画像から特定できる問題から，問題文とファイル名から工夫して調べないと解けない問題を用意しました．
+
 ## 開催と作問をした感想
 
 - P0keM0n G0はもう少し難易度を高くしたかったのですが，私の実力不足でした．
