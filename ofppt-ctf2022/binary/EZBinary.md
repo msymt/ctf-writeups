@@ -1,0 +1,59 @@
+# EZBinary
+
+## Description
+
+250
+
+Why is it always a password?
+
+## writeup
+
+Ghidraで開くと1文字ずつ確認していることが分かりました。
+ASCIIコードで変換するとフラグが出てきました。
+
+https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')&input=MHg0ZgoweDQ2CjB4NTAKMHg1MAoweDU0CjB4MmQKMHg0MwoweDU0CjB4NDYKMHg3YgoweDM3CjB4NjgKMHgzMQoweDczCjB4NWYKMHg2MgoweDMxCjB4NmUKMHgzNAoweDcyCjB4NzkKMHg1ZgoweDMxCjB4NzMKMHg1ZgoweDU2CjB4NzUKMHg2ZQoweDZjCjB4MzMKMHg3MgoweDM0CjB4NjIKMHg2YwoweDMzCjB4N2Q
+
+```
+0x4f
+0x46
+0x50
+0x50
+0x54
+0x2d
+0x43
+0x54
+0x46
+0x7b
+0x37
+0x68
+0x31
+0x73
+0x5f
+0x62
+0x31
+0x6e
+0x34
+0x72
+0x79
+0x5f
+0x31
+0x73
+0x5f
+0x56
+0x75
+0x6e
+0x6c
+0x33
+0x72
+0x34
+0x62
+0x6c
+0x33
+0x7d
+```
+
+## FLAG
+
+```bash
+OFPPT-CTF{7h1s_b1n4ry_1s_Vunl3r4bl3}
+```
