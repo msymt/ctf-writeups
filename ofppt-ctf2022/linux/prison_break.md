@@ -9,7 +9,7 @@ A linux jail challenge. Find a way out of prison shell! try root!
 ## writeup
 
 whomai, hostname以外に、特定のコマンドを打つとブロックされました。
-試しに/etc/passwdをcatするとディレクトリ情報が出てきたため、ルート配下を全て見てみると、/ctfディレクトリを確認しました。そして/ctf/*の中を見るとflag.txtがありました。tacコマンドを使うと見れると思い使うと見れました。また、shコマンドの後にコマンドを打つとフラグが見れました。
+試しに/etc/passwdをcatするとディレクトリ情報が出てきたため、ルート配下を全て見てみると、/ctfディレクトリを確認しました。そして/ctf/*の中を見るとflag.txtがありました。そして、tacコマンドで見れました。また、shコマンドの後にコマンドを打つとフラグが見れました。
 
 ```bash
 $ nc 143.198.224.219 21212
