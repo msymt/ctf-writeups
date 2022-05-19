@@ -120,12 +120,6 @@ main -> menu(rax_24, rax_21);とmenu関数をみていると、keyっぽい文�
 [X] Flaggle Alpha    | admin secret power hidden        |       *        [*]
 Which dimension would you like to examine? 1
 The Ice Dimension
-Which dimension would you like to examine? 9
-That option was invalid.
-Which dimension would you like to examine? 8
-That option was invalid.
-Which dimension would you like to examine? 7
-That option was invalid.
 Which dimension would you like to examine? 6
 [X] That entry is encrypted - please enter your WIDE decryption key: sup3rs3cr3tw1d3
 HTB{str1ngs_4r3nt_4lw4ys_4sc11}
