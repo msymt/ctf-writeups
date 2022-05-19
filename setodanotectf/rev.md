@@ -2,9 +2,13 @@
 
 ## HelloWorld
 
-逆アセンブルをすると、引数にflagを入力することで、出力が変わりそうだったのでそうしました。
+exeを実行して、`flag` を第1引数に設置すれば良いと判断しました。
 
 ```bash
+$ helloworld.exe
+Nice try, please set some word when you run me.
+$ helloworld.exe a
+Good job, but please set 'flag' when you run me.
 $ helloworld.exe flag
 flag{free_fair_and_secure_cyberspace}
 ```
