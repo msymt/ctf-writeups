@@ -6,7 +6,7 @@ Score: 378pt
 
 Rank: 217 / 891 teams
 
-- [H2/misc: 248 team solved](./misc/misc.md)
+- [H2/misc: 248 team solved](./misc/h2.md)
 - [BeginnersBof/pwn: 155 team solved](./pwn/BeginnersBof.md)
 - [CoughingFox/crypto: 443 team solved](./crypto/coughingfox.md)
 - [Quiz/rev: 650 team solved](./rev/quiz.md)
