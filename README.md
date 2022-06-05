@@ -19,6 +19,7 @@
 
 - [angstormctf 2022](./angstromctf2022/)
 - [b01lersCTF 2022](./b01lersCTF2022)
+- [ctf4b2022](./ctf4b2022/)
 - [cyberApocalypseCTF 2022](./cyberApocalypseCTF2022)
 - [HeroCTF v4](./heroctfv4/)
 - [knightCTF 2022](./knightCTF2022/)
