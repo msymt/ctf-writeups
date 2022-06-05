@@ -1,4 +1,4 @@
-# CoughingFox
+# CoughingFox: 443 team solved
 
 ※もっと簡単に解ける方法があると思います。
 
