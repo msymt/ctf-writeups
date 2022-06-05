@@ -20,9 +20,10 @@ Rank: 217 / 891 teams
 
 ## 解こうとして解けなかった問題
 
-- Util/web
-- hitchhike4b/misc
-- raindrop/pwn
-- WinTLS/rev
-- Recursive/rev
+- [Util/web: 460 team solved](./web/util.md)
+- hitchhike4b/misc: 125 team solved
+- raindrop/pwn: 52 team solved
+- WinTLS/rev: 102 team solved
+- Recursive/rev: 127 team solved
+
 
