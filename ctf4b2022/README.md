@@ -7,7 +7,7 @@ Score: 378pt
 Rank: 217 / 891 teams
 
 - [H2/misc: 248 team solved](./misc/h2.md)
-- [BeginnersBof/pwn: 155 team solved](./pwn/BeginnersBof.md)
+- [BeginnersBof/pwn: 155 team solved](./pwn/BeginnersBof/README.md)
 - [CoughingFox/crypto: 443 team solved](./crypto/coughingfox.md)
 - [Quiz/rev: 650 team solved](./rev/quiz.md)
 - phisher/misc: 238 team solved
@@ -22,7 +22,7 @@ Rank: 217 / 891 teams
 
 - [Util/web: 460 team solved](./web/util.md)
 - hitchhike4b/misc: 125 team solved
-- raindrop/pwn: 52 team solved
+- [raindrop/pwn: 52 team solved](./pwn/raindrop/README.md)
 - WinTLS/rev: 102 team solved
 - Recursive/rev: 127 team solved
 
