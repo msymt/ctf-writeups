@@ -40,6 +40,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 474714        0x73E5A         End of Zip archive, footer length: 22
 ```
 
+![flag](./images/flag.png)
 
 ### FLAG
 
@@ -83,6 +84,8 @@ UEsDBBQAAAAIAEKk8lIYGu97DhgHAG8YBwALAAAAZ29vZGpvYi5wbmdUumN3JUy0Rrtj27Zt
 ```
 
 https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)
+
+![flag](./images/goodjob.png)
 
 ### FLAG
 
