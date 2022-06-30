@@ -24,6 +24,6 @@ Rank: 217 / 891 teams
 - hitchhike4b/misc: 125 team solved
 - [raindrop/pwn: 52 team solved](./pwn/raindrop/README.md)
 - WinTLS/rev: 102 team solved
-- Recursive/rev: 127 team solved
+- [Recursive/rev: 127 team solved](./rev/recursive.md)
 
 
