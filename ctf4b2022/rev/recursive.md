@@ -47,7 +47,9 @@ undefined8 main(void){
 ```
 
 入力された文字列の長さが`0x26`のとき、`check(flag, 0)`を呼び出していることがわかります。
-check関数を見ると文字列を2分割し、`check(buf,param_2)`と`check(buf,half_length * half_length + param_2)`を呼び出していました。この後文字列の長さが1、かつ`table[param_2]`がflagと一致しているとき1を返しています。
+`check`関数を見ると文字列を2分割し、`check(buf,param_2)`と`check(buf,half_length * half_length + param_2)`を呼び出していました。
+この後文字列の長さが1、かつ`table[param_2]`が`flag`と一致しているとき`1`を返しています。
+
 というわけで、`table[param_2]`の中身がフラグになっていると思われるため、必要な処理のみを抽出します。
 ```c
 undefined8 check(char *param_1,int param_2){
@@ -83,7 +85,7 @@ undefined8 check(char *param_1,int param_2){
 }
 ```
 
-tableは探すと配列になっていてため、以下のように書き直しました。
+tableはデコンパイラ結果から探すと見つかったため、そのまま配列にしました。
 
 ```python
 table = [
@@ -137,7 +139,6 @@ def check(flag, n):
     check(flag[half_length:], half_length ** 2 + n)
 
 check(init_flag, 0)
-print()
 ```
 
 ## FLAG
