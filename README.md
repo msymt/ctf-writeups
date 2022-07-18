@@ -24,6 +24,7 @@
 - [HeroCTF v4](./heroctfv4/)
 - [knightCTF 2022](./knightCTF2022/)
 - [NahamConCTF 2022](./NahamConCTF2022/)
+- [nazotokiCTF](./nazotokiCTF/)
 - [ofppt-ctf 2022](./ofppt-ctf2022/)
 - [ritsecCTF 2022](./ritsecCTF2022/)
 - [tjctf 2022](./tjctf2022/)
