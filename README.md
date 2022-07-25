@@ -23,6 +23,7 @@
 - [cyberApocalypseCTF 2022](./cyberApocalypseCTF2022)
 - [HeroCTF v4](./heroctfv4/)
 - [knightCTF 2022](./knightCTF2022/)
+- [Lexington Informatics Tournament CTF 2022](./litctf2022)
 - [NahamConCTF 2022](./NahamConCTF2022/)
 - [nazotokiCTF](./nazotokiCTF/)
 - [ofppt-ctf 2022](./ofppt-ctf2022/)
