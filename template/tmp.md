@@ -2,7 +2,7 @@
 
 ## Description
 
-## SOLUTIONS
+## SOLUTION
 
 ## FLAG
 
