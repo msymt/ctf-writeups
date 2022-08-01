@@ -226,8 +226,16 @@ A soldier was walking around the streets of Sicily, late at night, with THE Cons
 f433c3e883a1389482c0b652660580f36ea037434fd4a67d193bc1cdc9b2cc34
 
 Flag format: TFCCTF{secret_message}
-
-
 ### SOLUTION(やったとこまで)
 
-なにこれ
+hash値っぽいと思い、オンラインの解析ツールにつっこむと英文らしき文字列が出てきました。
+
+https://crackstation.net/
+
+![mafiso](images/mafiso.png)
+
+### FLAG
+
+```
+TFCCTF{snitchesgetstitches}
+```
