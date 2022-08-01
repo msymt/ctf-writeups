@@ -215,6 +215,7 @@ INFO    : volatility.debug    : Determining profile based on KDBG search...
              KUSER_SHARED_DATA : 0xfffff78000000000L
 ```
 
+WinDbgを使えば解析できそう。
 
 ## MAFIOSO/CRYPTO
 
