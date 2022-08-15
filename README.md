@@ -1,7 +1,7 @@
 # ctf-writeup
 
 > **Warning**
-> 悪用厳禁
+> 悪用厳禁, Educational purpose only
 
 ## contest
 
