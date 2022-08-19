@@ -12,9 +12,8 @@
 
 ### 常設CTF
 
-- [BUUCTF](./buuctf/)
 - [setodanotectf](./setodanotectf/)
-- [picoGym 2021](./picoGym2021/)
+
 ### 2022
 
 - [angstormctf 2022](./angstromctf2022/)
@@ -37,8 +36,8 @@
 - [SECCON Beginners CTF 2021(ctf4b 2021)](./ctf4b2021/)
 - [harekaze mini ctf 2021](./harekaze-mini2021/)
 - [hsctf](./hsctf8/)
+- [picoGym 2021](./picoGym2021/)
 - [task CTF 2021](./taskctf2021/)
 - [tsukuctf 2021](./tsukuctf2021/)
 - [waniCTF 2021](./wanictf/2021/)
 - [waniCTF 2021/11](./wanictf/2021_11/)
-
