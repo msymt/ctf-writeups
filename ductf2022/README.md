@@ -2,6 +2,20 @@
 
 https://play.duc.tf/
 
+- [DownUnderCTF 2022](#downunderctf-2022)
+  - [rev:source provided](#revsource-provided)
+    - [solution](#solution)
+    - [flag](#flag)
+  - [pwn:babyp(y)wn](#pwnbabypywn)
+    - [solution](#solution-1)
+    - [flag](#flag-1)
+  - [DFIR: doxme](#dfir-doxme)
+    - [solution](#solution-2)
+    - [flag](#flag-2)
+  - [DFIR: Shop-Knock Knock Knock](#dfir-shop-knock-knock-knock)
+    - [solution](#solution-3)
+    - [flag](#flag-3)
+
 ## rev:source provided
 
 beginner, In this reversing challenge, source is provided.
