@@ -6,15 +6,18 @@ https://play.duc.tf/
   - [rev:source provided](#revsource-provided)
     - [solution](#solution)
     - [flag](#flag)
+  - [rev: Legit App Not Ransomware](#rev-legit-app-not-ransomware)
+    - [solutions](#solutions)
+    - [flag](#flag-1)
   - [pwn:babyp(y)wn](#pwnbabypywn)
     - [solution](#solution-1)
-    - [flag](#flag-1)
+    - [flag](#flag-2)
   - [DFIR: doxme](#dfir-doxme)
     - [solution](#solution-2)
-    - [flag](#flag-2)
+    - [flag](#flag-3)
   - [DFIR: Shop-Knock Knock Knock](#dfir-shop-knock-knock-knock)
     - [solution](#solution-3)
-    - [flag](#flag-3)
+    - [flag](#flag-4)
 
 ## rev:source provided
 
@@ -91,6 +94,50 @@ print(flag)
 
 ```
 DUCTF{r3v_is_3asy_1f_y0u_can_r34d_ass3mbly_r1ght?}
+```
+
+## rev: Legit App Not Ransomware
+
+easy, We've been sent this file... it looks so tempting. It says it's not ransomware... so it should be safe right?
+
+NOTE: Don't panic if you do run it, it doesn't do anything!
+
+Author: NoSurf#3704
+
+### solutions
+
+ILSpyでexeファイルをデコンパイルすると、Main関数にて入力値を比較する処理がありました。`VGhhdCdzIGl0ISBUaGF0J3MgdGhlIGZsYWch`はbase64でデコードしたら`That's it! That's the flag!`だったので、変数`d,u,c,t,f`をくっ付ければよいと判断しました。
+
+```cs
+if (Operators.CompareString(EncodeMe(Console.ReadLine()), DecodeMe(string.Concat(new string[6] { d, u, c, t, f, "=" })), false) == 0)
+	{
+		Console.WriteLine(DecodeMe("VGhhdCdzIGl0ISBUaGF0J3MgdGhlIGZsYWch"));
+	}
+	else
+	{
+		Console.WriteLine(DecodeMe("V3JvbmcgcGFzc3dvcmQsIGxvb2tzIGxpa2UgeW91ciBmaWxlcyBhcmUgVE9BU1Q="));
+	}
+```
+
+`Program` -> `Program()`から、変数の初期値が見れました。
+
+```
+// LegitAppNotRansomware.Program
+private static string d = "UkZWRFZF";
+private static string u = "WjdaREZrWDNrd2RW";
+private static string c = "OXdZV";
+private static string t = "zR4WTE4d2NsOWpNREJzWDJG";
+private static string f = "elgyTjFZM1Z0WWpOeWZRPT0";
+```
+
+目的の変数のみ抽出し、base64でデコードをするとフラグが出てきました。
+
+`UkZWRFZFWjdaREZrWDNrd2RWOXdZVzR4WTE4d2NsOWpNREJzWDJGelgyTjFZM1Z0WWpOeWZRPT0` -> `DUCTF{d1d_y0u_pan1c_0r_c00l_as_cucumb3r}`
+
+### flag
+
+```
+DUCTF{d1d_y0u_pan1c_0r_c00l_as_cucumb3r}
 ```
 
 
