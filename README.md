@@ -30,6 +30,7 @@
 - [nazotokiCTF](./nazotokiCTF/)
 - [ofppt-ctf 2022](./ofppt-ctf2022/)
 - [ritsecCTF 2022](./ritsecCTF2022/)
+- [SekaiCTF 2022](./sekaiCTF2022/)
 - [tfc ctf 2022](./tfcctf2022/)
 - [tjctf 2022](./tjctf2022/)
 - [ua csw ctf 2022](./ua_csw_ctf2022/)
