@@ -280,7 +280,7 @@ TsukuCTF22{アパホテル&リゾート〈両国駅タワー〉_2428}
 ## 後でやる
 
 - GrandpaMemory
-  - Intel 4004?
+  - ~~Intel 4004?~~
 - what_time_is_it
   - 特急うずしお
 - uTSUKUSHIi
