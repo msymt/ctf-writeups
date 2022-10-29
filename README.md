@@ -31,6 +31,7 @@
 - [NahamConCTF 2022](./NahamConCTF2022/)
 - [nazotokiCTF](./nazotokiCTF/)
 - [ofppt-ctf 2022](./ofppt-ctf2022/)
+- [open xINT CTF 2022](./openxINTCTF2022)
 - [ritsecCTF 2022](./ritsecCTF2022/)
 - [SekaiCTF 2022](./sekaiCTF2022/)
 - [tfc ctf 2022](./tfcctf2022/)
