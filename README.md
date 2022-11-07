@@ -18,6 +18,7 @@
 
 - [angstormctf 2022](./angstromctf2022/)
 - [b01lersCTF 2022](./b01lersCTF2022)
+- [buckeyectf 2022](./buckeyectf2022/)
 - [CakeCTF 2022](./cakectf2022/)
 - [CSAW CTF Qualification Round 2022](./csawCTF2022/)
 - [DEADFACE CTF(2022)](./deadfacectf2022/)
