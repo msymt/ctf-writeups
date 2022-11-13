@@ -8,6 +8,7 @@ https://ctftime.org/event/1764
   - [misc/finding](#miscfinding)
     - [解放1](#解放1)
     - [解放2](#解放2)
+  - [rev/babycmp](#revbabycmp)
 
 
 ## misc/finding
@@ -115,3 +116,5 @@ filename: [-] something went wrong
 [+] congrats!
 SECCON{exit_1n_Pyth0n_d0es_n0t_c4ll_exit_sysc4ll}
 ```
+
+## rev/babycmp
