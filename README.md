@@ -39,6 +39,7 @@
 - [tjctf 2022](./tjctf2022/)
 - [tsukuctf 2022](./tsukuctf2022/)
 - [ua csw ctf 2022](./ua_csw_ctf2022/)
+- [UECTF2022](./UECTF2022)
 - [wtfctf 2022](./wtfctf2022/)
 ### 2021
 
