@@ -466,7 +466,7 @@ python3.9のpycファイルをデコンパイルするために、pycdcを採用
         case Pyc::JUMP_IF_NOT_EXC_MATCH_A:
         case Pyc::RERAISE:
 ```
-パッチ的用語、pycdcを実行すると以下のpythonコードが出力された。
+パッチ適用後、pycdcを実行すると以下が出力された。
 
 ```python
 # Source Generated with Decompyle++
