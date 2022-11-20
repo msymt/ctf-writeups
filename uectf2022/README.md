@@ -4,6 +4,8 @@ https://uectf.uec.tokyo/
 
 place: 31st, points: 1210
 
+解けなかった問題は最後に載せた。
+
 - [[rev easy] A file (81solves)](#rev-easy-a-file-81solves)
 - [[rev] captain-hook (21solves)](#rev-captain-hook-21solves)
 - [[crypto noob] RSA (57solves)](#crypto-noob-rsa-57solves)
@@ -16,7 +18,10 @@ place: 31st, points: 1210
 - [[misc steg/easy] GIF1 (59solves)](#misc-stegeasy-gif1-59solves)
 - [[misc steg] GIF2 (30solves)](#misc-steg-gif2-30solves)
 - [[rev] revPython : unsolved](#rev-revpython--unsolved)
+- [[Forensics] Compare : unsolved](#forensics-compare--unsolved)
 - [[misc] PDF : unsolved](#misc-pdf--unsolved)
+- [[misc] WHEREAMI : unsolved](#misc-whereami--unsolved)
+- [[misc] OSINT : unsolved](#misc-osint--unsolved)
 
 ## [rev easy] A file (81solves)
 
@@ -502,6 +507,12 @@ if __name__ == '__main__':
 
 ハッシュ値のdecryptから責めるのは厳しい。ここから手が止まった。
 
+## [Forensics] Compare : unsolved
+
+>新しくUECTFのロゴを作ったよ。え？元々あったロゴと同じじゃないかって？君はまだまだ甘いなぁ。
+I made a new logo for UECTF. What, do you think it's the same as the original logo? You are still a bit naive.
+
+`UECTF_org.bmp`と`UECTF_new.bmp`のどちらかを青空でいじると違う部分があり、データ配列が変わったことは分かった。同ツールで合成したり、XORしたりと色々したが分からなかった。
 
 ## [misc] PDF : unsolved
 
@@ -547,114 +558,18 @@ Version 1:
                 /Names (9): [449, 435, 436, 437, 438, 439, 440, 441, 442]
 ```
 
-```
-PPDF> object 449
+## [misc] WHEREAMI : unsolved
 
-<< /Metadata 389 0 R
-/ViewerPreferences << /DisplayDocTitle true >>
-/OutputIntents [ 388 0 R ]
-/OpenAction 450 0 R
-/Pages 386 0 R
-/PageLabels << /Nums [ 0 << /S /r >> 5 << /S /A
-/St 22 >> 6 << /S /A
-/St 21 >> 8 << /S /A
-/St 4 >> 9 << /S /A
-/St 22 >> 10 << /S /A
-/St 5 >> 11 << /S /A
-/St 26 >> 12 << /S /D
-/St 7 >> 13 << /S /A
-/St 18 >> 14 << /S /A
-/St 7 >> 15 << /S /D
-/St 8 >> 16 << /S /a
-/St 20 >> 17 << /S /a
-/St 5 >> 18 << /S /A
-/St 20 >> 19 << /S /A
-/St 2 >> 20 << /S /A
-/St 22 >> 21 << /S /A
-/St 12 >> 22 << /S /A
-/St 23 >> 23 << /S /a
-/St 20 >> 24 << /S /A
-/St 15 >> 25 << /S /a
-/St 2 >> 26 << /S /D
-/St 3 >> 27 << /S /a
-/St 3 >> 28 << /S /a
-/St 20 >> 29 << /S /A
-/St 14 >> 30 << /S /D
-/St 2 >> 31 << /S /a
-/St 8 >> 32 << /S /A
-/St 2 >> 33 << /S /A
-/St 22 >> 34 << /S /A
-/St 3 >> 35 << /S /D >> 36 << /S /A
-/St 17 >> 37 << /S /A
-/St 26 >> 38 << /S /A
-/St 7 >> 39 << /S /A
-/St 25 >> 40 << /S /a
-/St 20 >> 41 << /S /a
-/St 3 >> 42 << /S /A
-/St 7 >> 43 << /S /A
-/St 5 >> 44 << /S /D
-/St 5 >> 45 << /S /A
-/St 18 >> 47 << /S /D >> 48 << /S /A
-/St 15 >> 49 << /S /a
-/St 4 >> 50 << /S /A
-/St 23 >> 51 << /S /D >> 52 << /S /A
-/St 3 >> 53 << /S /A
-/St 13 >> 54 << /S /D >> 55 << /S /A
-/St 9 >> 56 << /S /D >> 57 << /S /A
-/St 12 >> 58 << /S /A
-/St 21 >> 59 << /S /A
-/St 14 >> 60 << /S /A
-/St 2 >> 61 << /S /A
-/St 20 >> 62 << /S /a
-/St 9 >> 63 << /S /D >> 64 << /S /A
-/St 22 >> 65 << /S /A
-/St 21 >> 66 << /P 0 >> 67 << /S /A
-/St 21 >> 68 << /S /a
-/St 20 >> 69 << /S /A
-/St 20 >> 70 << /S /A
-/St 5 >> 71 << /S /A
-/St 22 >> 72 << /P 0 >> 73 << /S /A
-/St 14 >> 74 << /S /D
-/St 2 >> 75 << /S /A
-/St 22 >> 76 << /S /A
-/St 19 >> 77 << /S /A
-/St 21 >> 78 << /S /a
-/St 25 >> 79 << /P 0 >> 80 << /S /a
-/St 23 >> 81 << /S /A
-/St 14 >> 82 << /S /D
-/St 2 >> 83 << /S /a
-/St 8 >> 84 << /S /A
-/St 6 >> 85 << /S /a
-/St 3 >> 86 << /S /a
-/St 9 >> 87 << /S /D >> 88 << /S /A
-/St 21 >> 89 << /S /A
-/St 19 >> 90 << /S /A
-/St 4 >> 91 << /S /A
-/St 18 >> 92 << /S /A
-/St 15 >> 93 << /S /A
-/St 12 >> 94 << /S /A
-/St 22 >> 95 << /S /A
-/St 10 >> 96 << /S /A
-/St 16 >> 97 << /S /a
-/St 2 >> 98 << /S /A
-/St 21 >> 99 << /S /A
-/St 2 >> 100 << /S /a
-/St 21 >> 101 << /S /A
-/St 12 >> 102 << /S /A
-/St 21 >> 103 << /S /D
-/St 5 >> 104 << /S /A
-/St 22 >> 105 << /S /A
-/St 20 >> 106 << /S /A
-/St 20 >> 107 << /S /A
-/St 14 >> 108 << /S /A
-/St 19 >> 109 << /S /A
-/St 14 >> 110 << /S /A
-/St 4 >> 112 << /S /a
-/St 11 >> 113 << /S /A
-/St 16 >> 114 << /S /D
-/St 3 >> 115 << /P 0 >> 116 << /S /r >> ] >>
-/Type /Catalog
-/Lang en-US
-/Names 446 0 R
-/PageMode /UseOutlines >>
-```
+>あなたの元に友人から「私はどこにいるでしょう？」という件名の謎の文字列が書かれたメールが送られてきました。 さて、これは何を示しているのでしょうか？
+You receive an email from your friend with a mysterious string of text with the subject line "Where am I?" Now, what does this indicate?
+
+`mail.txt`を開くと、[plus code](https://support.google.com/maps/answer/7047426?hl=ja&co=GENIE.Platform%3DDesktop&oco=0)が書かれていた。
+そのうちの1つをGoogle Mapで検索すると[北太平洋を指していた](https://www.google.com/maps/place/7RJP2C22%2B22/@22,154.3978114,17z/data=!4m13!1m7!3m6!1s0x0:0x36d8c289906bb74!2s7RJP2C22%2B22!3b1!8m2!3d22!4d154.4000001!3m4!1s0x0:0x36d8c289906bb74!8m2!3d22!4d154.4000001)。
+
+## [misc] OSINT : unsolved
+
+>There is this link to a Twitter account. However, Twitter says that "This account doesn’t exist." Could you somehow use your magic to find this person? I'm pretty sure he's still using Twitter. Thanks!!
+あるTwitterアカウントへのリンクがありました。アクセスすると"このアカウントは存在しません"と表示されて困っているんだ...😖 他の情報源によるとTwitterをまだやっているはずなんだけどなぁ🤔
+https://twitter.com/__yata_nano__
+
+[webpack machine](https://web.archive.org/web/20221026140525/https://twitter.com/__yata_nano__)で同アカウントが引っかかった。
