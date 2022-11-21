@@ -47,7 +47,7 @@
 - [harekaze mini ctf 2021](./harekaze-mini2021/)
 - [hsctf](./hsctf8/)
 - [picoGym 2021](./picoGym2021/)
-- [task CTF 2021](./taskctf2021/)
+- [taskCTF21](./taskctf21/)
 - [tsukuctf 2021](./tsukuctf2021/)
 - [waniCTF 2021](./wanictf/2021/)
 - [waniCTF 2021/11](./wanictf/2021_11/)

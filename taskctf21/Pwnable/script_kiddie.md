@@ -44,8 +44,6 @@ Which flag do you want?`cat flag`
 taskctf{n0w_y0u_g0t_shell}
 ```
 
-FLAG
-
 ```bash
 taskctf{n0w_y0u_g0t_shell}
 ```

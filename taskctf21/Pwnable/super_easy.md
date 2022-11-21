@@ -1,6 +1,6 @@
 # super_easy
 
-BOFです．大量のAを入力すれば良い
+BOF。大量のAを入力した。
 ```
 $ nc 
 Input task name
