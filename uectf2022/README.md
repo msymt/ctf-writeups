@@ -21,6 +21,8 @@ place: 31st, points: 1210
   - [\[rev\] discrete : unsolved](#rev-discrete--unsolved)
   - [\[rev\] revPython : unsolved](#rev-revpython--unsolved)
   - [\[Forensics\] Compare : unsolved](#forensics-compare--unsolved)
+  - [\[Forensics\] Discord 1 : unsolved](#forensics-discord-1--unsolved)
+  - [\[Forensics\] Discord 2 : unsolved](#forensics-discord-2--unsolved)
   - [\[misc\] PDF : unsolved](#misc-pdf--unsolved)
   - [\[misc\] WHEREAMI : unsolved](#misc-whereami--unsolved)
   - [\[misc\] OSINT : unsolved](#misc-osint--unsolved)
@@ -664,6 +666,33 @@ diff UECTF_new.txt UECTF_org.txt > result
 UECTF{compare_two_files_byte_by_byte}
 ```
 
+## [Forensics] Discord 1 : unsolved
+
+>数日前、CTFの作問をやっている友達が送ってきたフラグの書かれた画像がいつの間にか消されていた。あれがあればこの問題にも正解できるはず… 調べたらDiscordのデータはこのフォルダに色々保存されているらしい。何とかして消された画像を見つけられないだろうか…
+A few days ago, a friend of mine who is doing a CTF composition question sent me an image with the flag written on it, which was deleted. If I had that one, I should be able to answer this question correctly... I checked and it seems that Discord data is stored in this folder. I wonder if there is any way to find the deleted image...
+
+`./discord/Cache`が怪しく、`strings ./discord/Cache/**/* | grep CTF`で探したが、見つからなかった。flagのほうで探すとあったらしい。
+
+```bash
+strings ./discord/Cache/**/* | grep flag
+whttps://media.discordapp.net/attachments/1039034703644205099/1039047405426982942/flag1.png?width=400&height=19
+https://media.discordapp.net/attachments/1039034703644205099/1039047405426982942/flag1.png
+////
+```
+
+## [Forensics] Discord 2 : unsolved
+
+>前に思いついたフラグ送信しようとして止めたんだけど、やっぱりあれが良かったなぁ… でもちゃんと思い出せないなぁ。このフォルダにはキャッシュとかも残ってるし、どこかに編集履歴みたいなの残ってないかなぁ…
+I tried to send to a friend the flag I thought of before and stopped, but I still liked that one... But I can't remember it properly. I'm sure there's a cache or something in this folder, and I'm wondering if there's some kind of edit history somewhere...
+
+stringsとgrepだけで解けた。
+
+```bash
+# discord2/Local Storage/leveldb
+strings ./discord2/**/* | grep CTF
+{"_state":{"1039033893849944084":{"1039070178207617074":{"0":{"timestamp":1667806462142,"draft":"UECTF{Y0U_C4N_S33_Y0UR_DRAFT}"}}}},"_version":2}
+```
+
 ## [misc] PDF : unsolved
 
 `peepdf`でSuspicious elementsを探ったが手応えなし。
@@ -723,3 +752,35 @@ You receive an email from your friend with a mysterious string of text with the 
 https://twitter.com/__yata_nano__
 
 [webpack machine](https://web.archive.org/web/20221026140525/https://twitter.com/__yata_nano__)で同アカウントが引っかかった。
+
+以下、[s98tさんのwriteup](https://nanimokangaeteinai.hateblo.jp/entry/2022/11/20/200406#MISC-436-OSINT-13-solves)を再現しました。
+
+ソースの`"identifier": "1585261641125416961"`から、[https://twitter.com/intent/user?user_id=1585261641125416961](https://twitter.com/intent/user?user_id=1585261641125416961)にアクセスした。[@ftceu](https://twitter.com/ftceu)のアカウントに遷移し、トップツイートのパスワードを https://pastebin.com/EDATYTtg に入力するとフラグが出た。
+```js
+// https://web.archive.org/web/20221026140525/https://twitter.com/__yata_nano__
+{
+  "@context": "https://web.archive.org/web/20221026140525/http://schema.org",
+  "@type": "ProfilePage",
+  "dateCreated": "2022-10-26T13:26:48.000Z",
+  "author": {
+    "@type": "Person",
+    "additionalName": "__yata_nano__",
+    "description": "",
+    "givenName": "name",
+    "homeLocation": {
+      "@type": "Place",
+      "name": ""
+    },
+    "identifier": "1585261641125416961",
+    "image": {
+      "@type": "ImageObject",
+      "contentUrl": "https://web.archive.org/web/20221026140525/https://pbs.twimg.com/profile_images/1585263988350210051/6X4jmbrS_400x400.jpg",
+      "thumbnailUrl": "https://web.archive.org/web/20221026140525/https://pbs.twimg.com/profile_images/1585263988350210051/6X4jmbrS_normal.jpg"
+    },
+    ///省略
+}
+```
+
+```
+UECTF{ur_a_tw1tter_mast3r__arent_y0u}
+```
