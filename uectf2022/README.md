@@ -6,22 +6,24 @@ place: 31st, points: 1210
 
 解けなかった問題は最後に載せた。
 
-- [[rev easy] A file (81solves)](#rev-easy-a-file-81solves)
-- [[rev] captain-hook (21solves)](#rev-captain-hook-21solves)
-- [[crypto noob] RSA (57solves)](#crypto-noob-rsa-57solves)
-- [[pwn noob]buffer_overflow (48solves)](#pwn-noobbuffer_overflow-48solves)
-- [[Forensics] Deleted (53solves)](#forensics-deleted-53solves)
-- [[web noob] webapi (42sovles)](#web-noob-webapi-42sovles)
-- [[misc noob] caesar (68solves)](#misc-noob-caesar-68solves)
-- [[misc] redaction gone wrong 1 (71solves)](#misc-redaction-gone-wrong-1-71solves)
-- [[misc] redaction gone wrong 2 (54solves)](#misc-redaction-gone-wrong-2-54solves)
-- [[misc steg/easy] GIF1 (59solves)](#misc-stegeasy-gif1-59solves)
-- [[misc steg] GIF2 (30solves)](#misc-steg-gif2-30solves)
-- [[rev] revPython : unsolved](#rev-revpython--unsolved)
-- [[Forensics] Compare : unsolved](#forensics-compare--unsolved)
-- [[misc] PDF : unsolved](#misc-pdf--unsolved)
-- [[misc] WHEREAMI : unsolved](#misc-whereami--unsolved)
-- [[misc] OSINT : unsolved](#misc-osint--unsolved)
+- [UECTF2022](#uectf2022)
+  - [\[rev easy\] A file (81solves)](#rev-easy-a-file-81solves)
+  - [\[rev\] captain-hook (21solves)](#rev-captain-hook-21solves)
+  - [\[crypto noob\] RSA (57solves)](#crypto-noob-rsa-57solves)
+  - [\[pwn noob\]buffer\_overflow (48solves)](#pwn-noobbuffer_overflow-48solves)
+  - [\[Forensics\] Deleted (53solves)](#forensics-deleted-53solves)
+  - [\[web noob\] webapi (42sovles)](#web-noob-webapi-42sovles)
+  - [\[misc noob\] caesar (68solves)](#misc-noob-caesar-68solves)
+  - [\[misc\] redaction gone wrong 1 (71solves)](#misc-redaction-gone-wrong-1-71solves)
+  - [\[misc\] redaction gone wrong 2 (54solves)](#misc-redaction-gone-wrong-2-54solves)
+  - [\[misc steg/easy\] GIF1 (59solves)](#misc-stegeasy-gif1-59solves)
+  - [\[misc steg\] GIF2 (30solves)](#misc-steg-gif2-30solves)
+  - [\[rev\] discrete : unsolved](#rev-discrete--unsolved)
+  - [\[rev\] revPython : unsolved](#rev-revpython--unsolved)
+  - [\[Forensics\] Compare : unsolved](#forensics-compare--unsolved)
+  - [\[misc\] PDF : unsolved](#misc-pdf--unsolved)
+  - [\[misc\] WHEREAMI : unsolved](#misc-whereami--unsolved)
+  - [\[misc\] OSINT : unsolved](#misc-osint--unsolved)
 
 ## [rev easy] A file (81solves)
 
@@ -452,6 +454,67 @@ I tried to hide the flag in a GIF animation. It's not all about what people can 
 
 ```
 UECTF{TH1S_1S_TH3_3NTR4NC3_T0_ST3G4N0GR4PHY}
+```
+
+## [rev] discrete : unsolved
+>Jumping around in memory
+記憶の中でジャンプする
+
+angrで解こうとしたものの解けなかった。どうやらavoidの指定が不要だったらしい。[mopiさんのソルバー](https://mopisec.hatenablog.com/entry/2022/11/21/091710)で解けた。avoidが刺さる時と刺さらない時の違いって何だろう。。。
+
+```python
+import angr
+import sys
+import claripy
+
+EXEC_NAME = './discrete'
+base_addr = 0x400000
+FIND_ADDR = base_addr + 0x213d
+# FIND_ADDR = base_addr + 0x2144
+
+p = angr.Project(EXEC_NAME, load_options={"auto_load_libs": False})
+state = p.factory.entry_state()
+simgr = p.factory.simulation_manager(state)
+simgr.explore(find=FIND_ADDR)
+
+try:
+    flag = simgr.found[0].posix.dumps(0)
+    print(flag[:flag.find(b'\x00')].decode())
+except IndexError:
+    print("Something went wrong :(")
+```
+
+解けなかった時のsolver
+```python
+import angr
+import sys
+import claripy
+
+input_file_path = './discrete'
+base_addr = 0x400000
+flag_length = 0x22
+known_string = 'UECTF{'
+FIND_ADDR = base_addr + 0x213d
+AVOID_ADDR = base_addr + 0x2150
+AVOID_ADDR2 = base_addr + 0x20f3
+
+proj = angr.Project(input_file_path, load_options={'auto_load_libs': False})
+known_chars = [claripy.BVV((known_string[i]))
+               for i in range(len(known_string))]
+flag_chars = [claripy.BVS(f"flag_{i}", 8)
+              for i in range(flag_length - len(known_string))]
+flag = claripy.Concat(*known_chars + flag_chars)
+state = proj.factory.full_init_state(args=[input_file_path, flag])
+sim_manager = proj.factory.simulation_manager(state)
+sim_manager.explore(find={FIND_ADDR}, avoid={AVOID_ADDR, AVOID_ADDR2})
+
+if(len(sim_manager.found) > 0):
+    print(sim_manager.found[0].solver.eval(flag, cast_to=bytes))
+```
+
+
+```
+UECTF{dynamic_static_strings_2022}
 ```
 
 ## [rev] revPython : unsolved
