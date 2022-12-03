@@ -25,6 +25,7 @@
 - [DownUnderCTF 2022](./ductf2022)
 - [GDG Algiers CTF 2022](./gdgAlgiersCTF2022/)
 - [SECCON Beginners CTF 2022(ctf4b 2022)](./ctf4b2022/)
+- [taskctf22](./taskctf2022/)
 - [cyberApocalypseCTF 2022](./cyberApocalypseCTF2022)
 - [HeroCTF v4](./heroctfv4/)
 - [knightCTF 2022](./knightCTF2022/)
