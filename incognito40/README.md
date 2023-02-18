@@ -135,7 +135,7 @@ cat challenge.png| xxd | head
 - [https://jsom1.github.io/_challenges/templed](https://jsom1.github.io/_challenges/templed)
 
 この暗号は，`the ciphers of the monks`と呼ばれている．
-以下の画像(出典：https://jsom1.github.io/_challenges/templed)の棒を重ね合わせたときの棒が，そのときに使用した数字と対応している．
+以下の画像(出典：https://jsom1.github.io/_challenges/templed )の棒を重ね合わせたときの棒が，そのときに使用した数字と対応している．
 
 ![](./images/cipher.png)
 
