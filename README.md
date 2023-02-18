@@ -14,6 +14,10 @@
 
 - [setodanotectf](./setodanotectf/)
 
+### 2023
+
+- [Incognito 4.0](./incognito40/)
+
 ### 2022
 
 - [angstormctf 2022](./angstromctf2022/)
