@@ -4,7 +4,7 @@ https://ctf.0xl4ugh.com
 
 - [Misc/Welcome](#miscwelcome)
   - [FLAG](#flag)
-- [Misc/Welcome](#miscwelcome-1)
+- [Forensics/ATT IP](#forensicsatt-ip)
   - [writeup1](#writeup1)
   - [writeup2](#writeup2)
   - [FLAG](#flag-1)
@@ -19,7 +19,7 @@ https://ctf.0xl4ugh.com
 0xL4ugh{W3LC0ME_T0_0UR_C7F_FREE_PALESTINE}
 ```
 
-## Misc/Welcome
+## Forensics/ATT IP
 
 This is a trojan, Can u identify the C2 server IP and the port?
 
