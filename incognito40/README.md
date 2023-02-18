@@ -25,7 +25,7 @@ https://ictf.ninja/challenges
 
 pythonのjail問題です．
 
-python3環境で，`()`以外の区切り文字(/, \, %, &, +など)が禁止されていた．
+python3環境で，`()`以外の区切り文字(/, \\, %, &, +など)が禁止されていた．
 
 ```bash
 jail> print(os.listdir("."))
@@ -34,7 +34,8 @@ jail> os.system("ls ./home")
 Error: Error: forbidden character '/'
 ```
 
-`/`を入力せずにパスを出力する方法として，`os.path.join`がある．これにより接続先が`/home/ctf`というディレクトリ構成だと判明した．
+`/`を入力せずにパスを出力する方法として，`os.path.join`がある．
+これにより接続先のディレクトリ構成が`/home/ctf`と判明した．
 
 ```bash
 jail> print(os.listdir(os.path.join("home")))
@@ -43,7 +44,8 @@ jail> print(os.listdir(os.path.join("home", "ctf")))
 ['.profile', '.bashrc', '.bash_logout', 'flag.txt', 'jail.py']
 ```
 
-最後に`/home/ctf/flag.txt`を出力する．そこで，`open()`, `read()`メソッドを用いて実現した．
+最後に`/home/ctf/flag.txt`を出力する．
+そこで`open()`, `read()`メソッドを用いて実現した．
 
 ```bash
 jail> path = os.path.join("home", "ctf", "flag.txt")
@@ -108,7 +110,7 @@ File Permissions                : -rw-r--r--
 Error                           : File format error
 ```
 
-PNGのファイルシグネチャを確認すると，`89 50 4E 47 0D 0A 1A 0A`となっていたなかったため，書き換えた．
+PNGのファイルシグネチャを確認すると，`89 50 4E 47 0D 0A 1A 0A`と不一致だったため修正した．
 
 ```bash
 # before
