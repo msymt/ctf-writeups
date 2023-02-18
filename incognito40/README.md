@@ -45,7 +45,7 @@ jail> print(os.listdir(os.path.join("home", "ctf")))
 ```
 
 最後に`/home/ctf/flag.txt`を出力する．
-そこで`open()`, `read()`メソッドを用いて実現した．
+これは`open()`, `read()`メソッドを用いて実現した．
 
 ```bash
 jail> path = os.path.join("home", "ctf", "flag.txt")
