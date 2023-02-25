@@ -1,16 +1,14 @@
-# CTF-Name
+# CTF-Name <!-- omit in toc -->
 
 <!-- ctf link -->
 
 ## challenge name
 
-### Description
+### SOLUTION <!-- omit in toc -->
 
-### SOLUTION
-
-### FLAG
+### FLAG <!-- omit in toc -->
 
 ```
 ```
 
-### REF
+### REF <!-- omit in toc -->
