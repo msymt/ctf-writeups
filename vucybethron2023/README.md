@@ -10,6 +10,7 @@ https://2023.cyberthon.lt/
 
 - [Digital Forensics/What is SHA1 checksum of image file blk0\_mmcblk0.bin ?: 10 points](#digital-forensicswhat-is-sha1-checksum-of-image-file-blk0_mmcblk0bin--10-points)
 - [Crypto/Weak Password: 10 points](#cryptoweak-password-10-points)
+- [Network-Security/Blue-Baby-Shark](#network-securityblue-baby-shark)
 - [OSINT/Find Location: 15 points](#osintfind-location-15-points)
 - [Rev/Reverse ME: 50points](#revreverse-me-50points)
 
@@ -76,6 +77,86 @@ https://www.cyberthon.lt
 
 ```
 VU{Kaunas}
+```
+## Network-Security/Blue-Baby-Shark
+
+> I got recomendation from one of our common acquaintance. I’m a new into all of this CTF stuff. I g...
+
+配布ファイル：pcapファイル
+
+### SOLTION <!-- omit in toc -->
+
+TCPストリームを眺めていると，Dataが存在するパケットが存在しました．
+そこから，Follow TCP Streamをすると，/etc/passwdの中身が送られていました．`vu:x:1337:b4by_5h4rk_fly_4w4y`がフラグでした．
+
+```bash
+id
+uid=0(root) gid=0(root) groups=0(root)
+cat /etc/passwd
+root:x:0:0:root:/root:/usr/bin/zsh
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+systemd-timesync:x:997:997:systemd Time Synchronization:/:/usr/sbin/nologin
+messagebus:x:100:107::/nonexistent:/usr/sbin/nologin
+tss:x:101:109:TPM software stack,,,:/var/lib/tpm:/bin/false
+strongswan:x:102:65534::/var/lib/strongswan:/usr/sbin/nologin
+tcpdump:x:103:110::/nonexistent:/usr/sbin/nologin
+usbmux:x:104:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
+dnsmasq:x:106:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+avahi:x:107:113:Avahi mDNS daemon,,,:/run/avahi-daemon:/usr/sbin/nologin
+speech-dispatcher:x:108:29:Speech Dispatcher,,,:/run/speech-dispatcher:/bin/false
+pulse:x:109:114:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+saned:x:110:117::/var/lib/saned:/usr/sbin/nologin
+lightdm:x:111:118:Light Display Manager:/var/lib/lightdm:/bin/false
+polkitd:x:996:996:polkit:/var/lib/polkit-1:/usr/sbin/nologin
+rtkit:x:112:119:RealtimeKit,,,:/proc:/usr/sbin/nologin
+colord:x:113:120:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+nm-openvpn:x:114:122:NetworkManager OpenVPN,,,:/var/lib/openvpn/chroot:/usr/sbin/nologin
+nm-openconnect:x:115:123:NetworkManager OpenConnect plugin,,,:/var/lib/NetworkManager:/usr/sbin/nologin
+mysql:x:116:124:MySQL Server,,,:/nonexistent:/bin/false
+stunnel4:x:995:995:stunnel service system account:/var/run/stunnel4:/usr/sbin/nologin
+_rpc:x:117:65534::/run/rpcbind:/usr/sbin/nologin
+geoclue:x:118:126::/var/lib/geoclue:/usr/sbin/nologin
+vu:x:1337:b4by_5h4rk_fly_4w4y
+Debian-snmp:x:119:127::/var/lib/snmp:/bin/false
+sslh:x:120:129::/nonexistent:/usr/sbin/nologin
+ntpsec:x:121:132::/nonexistent:/usr/sbin/nologin
+redsocks:x:122:133::/var/run/redsocks:/usr/sbin/nologin
+rwhod:x:123:65534::/var/spool/rwho:/usr/sbin/nologin
+iodine:x:124:65534::/run/iodine:/usr/sbin/nologin
+miredo:x:125:65534::/var/run/miredo:/usr/sbin/nologin
+statd:x:126:65534::/var/lib/nfs:/usr/sbin/nologin
+redis:x:127:134::/var/lib/redis:/usr/sbin/nologin
+postgres:x:128:135:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+mosquitto:x:129:136::/var/lib/mosquitto:/usr/sbin/nologin
+inetsim:x:130:137::/var/lib/inetsim:/usr/sbin/nologin
+_gvm:x:131:139::/var/lib/openvas:/usr/sbin/nologin
+king-phisher:x:132:140::/var/lib/king-phisher:/usr/sbin/nologin
+kali:x:1000:1000:,,,:/home/kali:/usr/bin/zsh
+Looks Great!
+```
+
+### FLAG <!-- omit in toc -->
+
+```
+VU{b4by_5h4rk_fly_4w4y}
 ```
 
 ## OSINT/Find Location: 15 points
