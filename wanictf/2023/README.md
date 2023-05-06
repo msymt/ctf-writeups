@@ -7,7 +7,7 @@ https://score.wanictf.org
 - [Misc/Prompt: Beginner](#miscprompt-beginner)
 - [Crypto/EZDORSA\_Lv1: Beginner](#cryptoezdorsa_lv1-beginner)
 - [Pwn/01.netcat: Beginner](#pwn01netcat-beginner)
-- [Pwnable/02.only once: Beginner](#pwnable02only-once-beginner)
+- [Pwn/02.only once: Beginner](#pwn02only-once-beginner)
 - [Forensics/Just\_mp4: Beginner](#forensicsjust_mp4-beginner)
 - [Forensics/whats\_happening: Beginner](#forensicswhats_happening-beginner)
 - [Forensics/lowkey\_messedup: Easy](#forensicslowkey_messedup-easy)
@@ -160,7 +160,7 @@ FLAG{1375_k339_17_u9_4nd_m0v3_0n_2_7h3_n3x7!}
 ```
 
 
-## Pwnable/02.only once: Beginner
+## Pwn/02.only once: Beginner
 
 計算問題に3問連続正解したら、ご褒美にシェルをプレゼント！
 
