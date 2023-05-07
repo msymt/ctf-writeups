@@ -15,6 +15,8 @@ https://score.wanictf.org
 - [Reversing/javersing: Easy](#reversingjaversing-easy)
 - [Reversing/fermat: Easy](#reversingfermat-easy)
 - [Web/IndexedDB: Beginner](#webindexeddb-beginner)
+- [beg\_for\_a\_peg](#beg_for_a_peg)
+  - [REF](#ref)
 
 
 ## Misc/Prompt: Beginner
@@ -497,3 +499,38 @@ FLAG{you_need_a_lot_of_time_and_effort_to_solve_reversing_208b47bd66c2cd8}
 FLAG{y0u_c4n_u3e_db_1n_br0wser}
 ```
 
+
+---
+
+終了後に解いた問題
+
+## beg_for_a_peg
+
+ある通信で受け渡されている画像ファイルをのぞき見てみましょう……
+
+### SOLUTION <!-- omit in toc -->
+
+pcapファイルでExtract TCP Streamをすると、flag.jpgが破損していました。
+
+rawデータから直接画像ファイルを取り出すと、フラグがでてきました。
+
+![](./images/pug.png)
+
+```python
+data = bytes.fromhex("ffd8ffe10075457869....0c06030180c060303ffd9")
+with open("./flag.jpg", "wb") as f:
+  f.write(data)
+```
+
+
+![](./images/flag_from_raw.jpg)
+
+### FLAG <!-- omit in toc -->
+
+```
+FLAG{Hug_a_pug_less_than_three}
+```
+
+### REF
+
+https://miso-24.hatenablog.com/#Normal-beg_for_a_peg
