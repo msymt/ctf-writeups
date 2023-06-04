@@ -176,7 +176,7 @@ for i in range(len(cipher)-1):
           else:
             if chr(s) == flag[i]:
               flag[i+1] = chr(t)
-            break
+              break
 
 print("".join(flag))
 
